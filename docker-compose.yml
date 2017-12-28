@@ -1,0 +1,4 @@
+sender:
+  build: .
+  volumes:
+    - ./:/app
