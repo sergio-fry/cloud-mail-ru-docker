@@ -11,6 +11,9 @@ RUN git clone https://gitlab.com/Kanedias/MARC-FS.git /usr/local/src/marc-fs && 
       cd /usr/local/src/marc-fs/build && cmake .. && make && \
       mv /usr/local/src/marc-fs/build/marcfs /usr/local/bin/
 
+COPY docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT docker-entrypoint.sh
+
 RUN adduser --system app
 USER app
 
