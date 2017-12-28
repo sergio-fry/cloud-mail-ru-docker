@@ -1,7 +1,4 @@
 sender:
   build: .
   privileged: true
-
   env_file: .env
-
-  command: "marcfs /tmp/mailru -o username=$MAILRU_LOGIN,password=$MAILRU_PASSWORD,cachedir=/tmp/cache"
