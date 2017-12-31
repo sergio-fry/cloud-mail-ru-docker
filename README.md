@@ -27,4 +27,4 @@ $ ls /tmp/mailru/
 
 ## Demo
 
-TODO
+[![asciicast](https://asciinema.org/a/KYOJc3j2soDZ6IGXg3LoAqxd4.png)](https://asciinema.org/a/KYOJc3j2soDZ6IGXg3LoAqxd4)
