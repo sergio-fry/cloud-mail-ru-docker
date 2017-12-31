@@ -4,7 +4,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/udalov/cloud-mail-ru-docker.svg)](https://hub.docker.com/r/udalov/cloud-mail-ru-docker)
 
 
-With this image you can mount cloud.mail.ru as a FUSE path. [MARC-FS](https://gitlab.com/Kanedias/MARC-FS.git) is used under the hood.
+With this image you can mount cloud.mail.ru as a FUSE path. [MARC-FS](https://gitlab.com/Kanedias/MARC-FS.git) is used under the hood. Without GUI login, VNC and so on.
 
 ## Ho To Use
 
@@ -28,3 +28,12 @@ $ ls /tmp/mailru/
 ## Demo
 
 [![asciicast](https://asciinema.org/a/KYOJc3j2soDZ6IGXg3LoAqxd4.png)](https://asciinema.org/a/KYOJc3j2soDZ6IGXg3LoAqxd4)
+
+## Why?
+
+There some other projects doing pretty the same:
+
+* https://hub.docker.com/r/delfer/cloudmailru/
+* https://hub.docker.com/r/dfayruzov/cloudmailru/
+
+So why do we need another one? The key feature of cloud-mail-ru-docker is ability to avoid GUI authentication at all. It is important when using CI to deliver builds, e.g.. 
