@@ -1,9 +1,8 @@
-FROM buildpack-deps:stretch
+FROM fedora:latest
 
 MAINTAINER Sergei O. Udalov <sergei.udalov@gmail.com>
 
-RUN apt-get update
-RUN apt-get install -y -qq git cmake g++ libfuse-dev libcurl4-gnutls-dev libjsoncpp-dev glusterfs-client
+RUN yum -y install git-all cmake make gcc-c++ fuse3 fuse3-devel libcurl-devel jsoncpp-devel
 
 RUN git clone https://gitlab.com/Kanedias/MARC-FS.git /usr/local/src/marc-fs && \
       cd /usr/local/src/marc-fs && git submodule init && git submodule update && \
