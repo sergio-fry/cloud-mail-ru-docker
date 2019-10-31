@@ -25,7 +25,7 @@ With this image you can mount cloud.mail.ru as a FUSE path. [MARC-FS](https://gi
 
 ```bash
 $ echo "Hello Mail.ru" > hello.txt
-$ docker run -v "$PWD":/local_drive -e MAILRU_LOGIN=my.email@mail.ru -e MAILRU_PASSWORD=secret123 --rm --privileged -i -t udalov/cloud-mail-ru-docker cp /local_drive/hello.txt /tmp/mailru/hello.txt
+$ docker run -v "$PWD":/local_drive -e MAILRU_LOGIN=my.email@mail.ru -e MAILRU_PASSWORD=secret123 --rm --privileged -i -t udalov/cloud-mail-ru-docker:0.1.1 cp /local_drive/hello.txt /tmp/mailru/hello.txt
 ```
 
 ## Demo
