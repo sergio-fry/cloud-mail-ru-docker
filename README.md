@@ -15,6 +15,7 @@ With this image you can mount cloud.mail.ru as a FUSE path. [MARC-FS](https://gi
 ## Configuration
 
 | ENV              | Default | Description                     |
+----------------------------------------------------------------
 | MAILRU_LOGIN     |         | login, e.g. 'my.email@mail.ru'  |
 | MAILRU_PASSWORD  |         | password                        |
 | MAILRU_AUTOMOUNT | true    | Mount clound on container start |
