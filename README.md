@@ -6,6 +6,8 @@
 
 With this image you can mount cloud.mail.ru as a FUSE path. [MARC-FS](https://gitlab.com/Kanedias/MARC-FS.git) is used under the hood. Without GUI login, VNC and so on.
 
+Configure CI to upload builds or write backup scripts with cloud.mail.ru storage.
+
 ## Ho To Use
 
 0. Set MAILRU_LOGIN, MAILRU_PASSWORD credentials as env variables
