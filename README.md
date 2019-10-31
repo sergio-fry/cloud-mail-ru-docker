@@ -10,19 +10,21 @@ With this image you can mount cloud.mail.ru as a FUSE path. [MARC-FS](https://gi
 
 0. Set MAILRU_LOGIN, MAILRU_PASSWORD credentials as env variables
 1. Start container with local path mounted as volume in a _privileged_ mode
-2. Mount remote cloud.mail.ru with `mount-mail-ru.sh` (mounted as `/tmp/mailru/`)
 3. Copy files in both directions
+
+## Configuration
+
+| ENV              | Default | Description                     |
+| MAILRU_LOGIN     |         | login, e.g. 'my.email@mail.ru'  |
+| MAILRU_PASSWORD  |         | password                        |
+| MAILRU_AUTOMOUNT | true    | Mount clound on container start |
 
 
 ## Example
 
 ```bash
-$ export MAILRU_LOGIN=my.email@mail.ru 
-$ export MAILRU_PASSWORD=secret123
-$ docker run -v "$PWD":/local_drive -e MAILRU_LOGIN=$MAILRU_LOGIN -e MAILRU_PASSWORD=$MAILRU_PASSWORD --rm --privileged -i -t udalov/cloud-mail-ru-docker bash
-$ mount-mail-ru.sh
-$ copy /local_drive/hello.txt /tmp/mailru/hello.txt
-$ ls /tmp/mailru/
+$ echo "Hello Mail.ru" > hello.txt
+$ docker run -v "$PWD":/local_drive -e MAILRU_LOGIN=my.email@mail.ru -e MAILRU_PASSWORD=secret123 --rm --privileged -i -t udalov/cloud-mail-ru-docker cp /local_drive/hello.txt /tmp/mailru/hello.txt
 ```
 
 ## Demo
